@@ -20,7 +20,7 @@ app = FastAPI()
 # Enable CORS for frontend (update origin in production)
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173"],  # React dev server
+    allow_origins=["http://localhost:5173", "https://pdf-talk-assistant.vercel.app"],  # React dev server
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
