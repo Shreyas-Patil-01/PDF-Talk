@@ -1,0 +1,25 @@
+# Core backend
+fastapi
+uvicorn
+
+# LangGraph + LangChain + OpenAI
+langchain
+langgraph
+langchain-openai
+openai
+tiktoken
+
+# Pinecone (latest SDK)
+pinecone
+
+# PDF processing
+pymupdf  # for PyMuPDF
+
+# Env & system utilities
+python-dotenv
+
+# Optional: HTTP client, for future external calls
+httpx
+
+# CORS for frontend requests
+fastapi[all]  # includes CORS, file uploads, etc.
