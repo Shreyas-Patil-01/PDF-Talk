@@ -127,7 +127,7 @@ export default function FileUpload({ onSuccess, isUploaded = false }: FileUpload
     formData.append('file', file);
 
     try {
-      const res = await fetch('http://localhost:8000/upload-pdf/', {
+      const res = await fetch(`${import.meta.env.VITE_BACKEND_URL}/upload-pdf/`, {
         method: 'POST',
         body: formData,
       });
