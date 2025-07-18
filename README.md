@@ -20,11 +20,12 @@ PDF-Talk is an **open-source** project that lets you _talk_ to your PDF files th
 At the heart of PDF-Talk is an AI agent built using the LangGraph orchestration framework, which enables stateful, multi-step, and tool-augmented reasoning .
 ### Integrated Tools
 The LangGraph agent in PDF-Talk incorporates key tools for working with document PDF content:
-####Summarizer Tool: Utilizes LLM-driven summarization prompts and map-reduce workflows to distill content into short and accurate summaries for users57.
 
-####Retrieval Tool: Employs semantic search and retrieval-augmented generation (RAG) techniques, allowing the agent to fetch the most relevant document snippets for a user's query. Can handle long and complex documents robustly8.
+Summarizer Tool: Utilizes LLM-driven summarization prompts and map-reduce workflows to distill content into short and accurate summaries for users57.
 
-####Quoting Tool: Scans the document to find and present direct quotations, always referencing the original page or section.
+Retrieval Tool: Employs semantic search and retrieval-augmented generation (RAG) techniques, allowing the agent to fetch the most relevant document snippets for a user's query. Can handle long and complex documents robustly8.
+
+Quoting Tool: Scans the document to find and present direct quotations, always referencing the original page or section.
 
 | Node               | Purpose                                                                           |
 |--------------------|-----------------------------------------------------------------------------------|
@@ -36,7 +37,7 @@ The LangGraph agent in PDF-Talk incorporates key tools for working with document
 
 ```mermaid
 graph TD
-    A(User Message) --> B{Router}
+    A(User Message) --> B{Agent}
     B -->|query| C(RetrievalTool)
     B -->|summarize| D(SummarizerTool)
     B -->|quote| E(QuotingTool)
